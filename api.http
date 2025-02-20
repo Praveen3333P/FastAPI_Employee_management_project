@@ -1,0 +1,35 @@
+# Install Rest Client extension to use this file easily.
+
+
+
+### if we want all employee details like all employees present in our database
+GET http://127.0.0.1:8000/employees/
+
+### if we want specific employee details using id we can get by this
+GET http://127.0.0.1:8000/employees/3
+
+### if we want to create any employee data in our database
+POST http://127.0.0.1:8000/employees/
+Content-Type: application/json
+
+{
+    "id": 12,
+    "name": "employee12",
+    "age": 34,
+    "department": "Operations",
+    "salary": 48000
+}
+
+### if we want to update any employee details
+PUT http://127.0.0.1:8000/employees/12
+Content-Type: application/json
+
+{
+  "name": "employee12 Updated",
+  "age": 31,
+  "department": "Operations Updated",
+  "salary": 44000.0
+}
+
+### if we want to delete any employee data
+DELETE http://127.0.0.1:8000/employees/12
